@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Bit of Grace</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for UI styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Canvas where all the actual retro logic happens -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <!-- UI Overlays -->
+        <div id="ui-overlay">
+            <div id="top-bar">
+                <div class="progress-title">80-YEAR UPLOAD</div>
+                <div class="progress-container">
+                    <div id="progress-bar-fill"></div>
+                </div>
+            </div>
+            
+            <button id="skip-btn" class="ui-button">SKIP_DATA</button>
+            
+            <div id="flash-overlay"></div>
+            
+            <!-- Instructions Overlay -->
+            <div id="instructions">
+                <h1>THE LAST BIT OF GRACE</h1>
+                <p>Use <strong>[SPACEBAR]</strong> to Control.</p>
+                <p>Era 1: Analog Soul - Jump over pits and obstacles.</p>
+                <p>Press SPACE to start the upload.</p>
+            </div>
+            <div id="gameOverScreen" style="display: none;">
+                <h1 id="gameOverTitle">DATA CORRUPTED</h1>
+                <p>Upload Failed.</p>
+                <p>Press SPACE to retry.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+</body>
+</html>
